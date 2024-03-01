@@ -14,8 +14,8 @@ const SignUp = () => {
                     Sign Up
                 </h1>
 
-                <div className='xl:w-[130px] h-[130px] rounded-full mx-auto mt-3 flex justify-center items-center'>
-                    <img src={logo} className='objectFit: ' />
+                <div className='xl:w-[130px] w-28 h-28 xl:h-[130px] rounded-full mx-auto mt-3 flex justify-center items-center'>
+                    <img src={logo} className='object-cover ' />
                 </div>
                 <form className="mt-6">
                     <div className="mb-2">
@@ -59,20 +59,7 @@ const SignUp = () => {
                             className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-red-700 focus:ring-red-800 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
-                    <div className="mb-2">
-                        <label
-                            htmlFor="password"
-                            className="block text-sm font-semibold text-gray-800"
-                        >
-                            Confirm Password
-                        </label>
-                        <input
-                            minLength={6}
-                            placeholder='Confirm your password'
-                            type="password"
-                            className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-red-700 focus:ring-red-800 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                    </div>
+
                     <div className="mb-2">
                         <label
                             htmlFor="phoneNumber"
@@ -88,7 +75,7 @@ const SignUp = () => {
                         />
                     </div>
                     <a
-
+                        onClick={() => navigate("/forgot-password")}
                         className="text-[15px] text-gray-700 hover:underline"
                     >
                         Forget Password?
